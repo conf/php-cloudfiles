@@ -156,7 +156,7 @@ class CloudFileAccountInfoTest extends PHPUnit_Framework_TestCase
     { 
         $o0 = $this->container->create_object("manifest");
         $o0->manifest = $this->container->name . "/manifest";
-        $result = $o0->write();
+        $result = $o0->write($this->object_data);
         $this->assertNotNull($result);
         $o0 = $this->container->get_object("manifest");
         $this->assertTrue($o0->manifest == $this->container->name . "/manifest");
